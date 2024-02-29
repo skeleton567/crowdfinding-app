@@ -1,7 +1,9 @@
 import Image from "next/image";
 import React from "react";
+import Button from "./formComponents/Button";
+import { TitleProps } from "./types/TitleProps";
 
-const Title: React.FC = () => {
+const Title: React.FC<TitleProps> = (props) => {
   return (
     <div className="bg-white h-[350px] w-[900px] rounded-lg text-center">
       <div className="w-full flex justify-center">
@@ -20,9 +22,7 @@ const Title: React.FC = () => {
         A beautiful & handcrafted monitor stand to reduce neck and eye strain
       </p>
       <div className="flex justify-between items-center p-10">
-        <button className="bg-green-500 text-white py-3 px-5 rounded-3xl">
-          Back this project
-        </button>
+        <Button text={"Back this project"} modalHandler={props.modalHandler} />
         <div className="flex justify-center items-center bg-gray-100 pr-5 rounded-3xl">
           <div className="p-5 bg-red-500 rounded-full transform translate-x-[-20%]">
             <Image
