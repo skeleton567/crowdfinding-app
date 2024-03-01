@@ -13,4 +13,6 @@ export type CardProps = {
     name: Path<TFieldValues>,
     options?: RegisterOptions
   ) => UseFormRegisterReturn;
+  minValue?: number;
+  refference?: string;
 };

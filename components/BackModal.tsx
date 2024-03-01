@@ -1,13 +1,13 @@
 import Image from "next/image";
 import ModalCard from "./ModalCard";
 import { BackModalProps } from "@/types/BackModalProps";
-import { MouseEvent, useState } from "react";
+import { MouseEvent, useEffect, useRef, useState } from "react";
 
 const BackModal: React.FC<BackModalProps> = (props) => {
-  const [radioValue, setRadioVlue] = useState("");
+  const [radioValue, setRadioValue] = useState("");
 
   const showInputHandler = (event: MouseEvent<HTMLInputElement>) => {
-    setRadioVlue(event.target.value);
+    setRadioValue(event.target.value);
   };
 
   return (
@@ -36,6 +36,7 @@ const BackModal: React.FC<BackModalProps> = (props) => {
         radioValue={radioValue}
         showInputHandler={showInputHandler}
         register={props.register}
+        minValue={0}
       />
       <ModalCard
         title={props.data.pledge_types[0].title}
@@ -48,6 +49,7 @@ const BackModal: React.FC<BackModalProps> = (props) => {
         radioValue={radioValue}
         showInputHandler={showInputHandler}
         register={props.register}
+        minValue={25}
       />
       <ModalCard
         title={props.data.pledge_types[1].title}
@@ -60,6 +62,7 @@ const BackModal: React.FC<BackModalProps> = (props) => {
         radioValue={radioValue}
         showInputHandler={showInputHandler}
         register={props.register}
+        minValue={75}
       />
       <ModalCard
         title={props.data.pledge_types[2].title}
@@ -72,6 +75,7 @@ const BackModal: React.FC<BackModalProps> = (props) => {
         radioValue={radioValue}
         showInputHandler={showInputHandler}
         register={props.register}
+        minValue={200}
       />
     </form>
   );

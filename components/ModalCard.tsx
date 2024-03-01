@@ -19,7 +19,9 @@ const ModalCard: React.FC<CardProps> = (props) => {
               className="mr-2"
               value={props.radio}
               onClick={props.showInputHandler}
-              {...props.register("pledge", { required: true })}
+              {...props.register("pledge", {
+                required: true,
+              })}
             />
             <label
               className="font-bold hover:text-green-600 cursor-pointer"
@@ -51,8 +53,8 @@ const ModalCard: React.FC<CardProps> = (props) => {
                 className="w-10 outline-none"
                 {...props.register("money", {
                   required: true,
-                  min: 1,
                   pattern: /^[0-9]+$/,
+                  min: props.minValue,
                 })}
               />
             </div>
