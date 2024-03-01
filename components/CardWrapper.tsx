@@ -1,4 +1,4 @@
-import { CardWrapperProps } from "./types/CardWrapperProps";
+import { CardWrapperProps } from "../types/CardWrapperProps";
 
 const CardWrapper: React.FC<CardWrapperProps> = (props) => {
   return (

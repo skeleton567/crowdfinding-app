@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import Button from "./formComponents/Button";
-import { TitleProps } from "./types/TitleProps";
+import { TitleProps } from "../types/TitleProps";
 
 const Title: React.FC<TitleProps> = (props) => {
   return (

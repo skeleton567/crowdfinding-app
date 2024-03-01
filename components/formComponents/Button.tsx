@@ -1,4 +1,4 @@
-import ButtonProps from "../types/ButtonProps";
+import { ButtonProps } from "../../types/ButtonProps";
 
 const Button: React.FC<ButtonProps> = (props) => {
   return (

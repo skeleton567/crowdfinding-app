@@ -1,4 +1,4 @@
-import { CalculationProps } from "./types/CalculationProps";
+import { CalculationProps } from "../types/CalculationProps";
 
 const Calculations: React.FC<CalculationProps> = (props) => {
   return (

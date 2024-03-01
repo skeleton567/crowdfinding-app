@@ -1,10 +1,10 @@
 import Button from "./formComponents/Button";
-import { CardProps } from "./types/CardProps";
+import { CardProps } from "../types/CardProps";
 
 const Card: React.FC<CardProps> = (props) => {
   return (
     <div className="p-5 border-gray-100 border-2 w-full mt-5 rounded-md">
-      <div className="flex justify-between">
+      <div className="flex justify-between w-full">
         <h3 className="font-bold size-8 w-full text-left text-lg">
           {props.title}
         </h3>
@@ -18,7 +18,7 @@ const Card: React.FC<CardProps> = (props) => {
           <span className="text-2xl font-bold">{props.amount} </span>
           <span className="text-gray-500">left</span>
         </h5>
-        <Button text={"Select Reward"}></Button>
+        <Button text="Select Reward"></Button>
       </div>
     </div>
   );
