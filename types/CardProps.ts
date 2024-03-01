@@ -9,7 +9,7 @@ export type CardProps = {
   radio?: string;
   radioValue?: string;
   showInputHandler?: (event: MouseEvent<HTMLInputElement>) => void;
-  register: <TFieldValues = Record<string, any>>(
+  register?: <TFieldValues = Record<string, any>>(
     name: Path<TFieldValues>,
     options?: RegisterOptions
   ) => UseFormRegisterReturn;

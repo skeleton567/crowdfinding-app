@@ -1,5 +1,6 @@
 import { FormEvent, ReactNode } from "react";
 import { Path, RegisterOptions, UseFormRegisterReturn } from "react-hook-form";
+import { PledgeType } from "./PledgeType";
 
 export type ModalWrapperProps = {
   children: ReactNode;
@@ -13,4 +14,5 @@ export type ModalWrapperProps = {
     name: Path<TFieldValues>,
     options?: RegisterOptions
   ) => UseFormRegisterReturn;
+  data: PledgeType;
 };

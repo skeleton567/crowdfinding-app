@@ -20,6 +20,7 @@ const ModalWrapper: React.FC<ModalWrapperProps> = (props) => {
               modalHandler={props.modalHandler}
               submitHandler={props.submitHandler}
               register={props.register}
+              data={props.data}
             />
           )}
           {props.isThankYouVisible && (

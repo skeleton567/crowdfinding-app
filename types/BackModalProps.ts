@@ -1,5 +1,6 @@
 import { FormEvent } from "react";
 import { Path, RegisterOptions, UseFormRegisterReturn } from "react-hook-form";
+import { PledgeType } from "./PledgeType";
 
 export type BackModalProps = {
   modalHandler?: () => void;
@@ -8,4 +9,5 @@ export type BackModalProps = {
     name: Path<TFieldValues>,
     options?: RegisterOptions
   ) => UseFormRegisterReturn;
+  data: PledgeType;
 };

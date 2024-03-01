@@ -3,7 +3,13 @@ import { CardProps } from "../types/CardProps";
 
 const ModalCard: React.FC<CardProps> = (props) => {
   return (
-    <div className="border-gray-100 border-2 w-full mt-5 rounded-md">
+    <div
+      className={`border-gray-100 border-2 w-full mt-5 rounded-md ${
+        !props.amount && props.title != "Pledge with no Reward"
+          ? "opacity-50 pointer-events-none"
+          : ""
+      }`}
+    >
       <div className="flex justify-between items-center m-5">
         <div className="flex gap-x-4">
           <div>
@@ -26,7 +32,7 @@ const ModalCard: React.FC<CardProps> = (props) => {
             {props.pledge}
           </p>
         </div>
-        {props?.amount && (
+        {props.title != "Pledge with no Reward" && (
           <h5 className="mt-3 flex items-center gap-2">
             <span className="text-2xl font-bold">{props.amount}</span>
             <span className="text-gray-500">left</span>

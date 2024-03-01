@@ -38,37 +38,37 @@ const BackModal: React.FC<BackModalProps> = (props) => {
         register={props.register}
       />
       <ModalCard
-        title={"Bamboo Stand"}
-        amount={100}
+        title={props.data.pledge_types[0].title}
+        amount={props.data.pledge_types[0].left}
         desc={
           "You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and you’ll be added to a special Backer member list."
         }
         pledge={"Pledge $25 or more"}
-        radio="bamboo"
+        radio={props.data.pledge_types[0].title}
         radioValue={radioValue}
         showInputHandler={showInputHandler}
         register={props.register}
       />
       <ModalCard
-        title={"Black Edition stand"}
-        amount={64}
+        title={props.data.pledge_types[1].title}
+        amount={props.data.pledge_types[1].left}
         desc={
           "You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added to our Backer member list. Shipping is included."
         }
         pledge={"Pledge $75 or more"}
-        radio="black"
+        radio={props.data.pledge_types[1].title}
         radioValue={radioValue}
         showInputHandler={showInputHandler}
         register={props.register}
       />
       <ModalCard
-        title={"Mahogany Special Edition"}
-        amount={1}
+        title={props.data.pledge_types[2].title}
+        amount={props.data.pledge_types[2].left}
         desc={
           "You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added to our Backer member list. Shipping is included."
         }
         pledge={"Pledge $200 or more"}
-        radio="mahogany"
+        radio={props.data.pledge_types[2].title}
         radioValue={radioValue}
         showInputHandler={showInputHandler}
         register={props.register}
